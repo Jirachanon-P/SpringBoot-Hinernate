@@ -1,0 +1,21 @@
+<!-- Hibernate Reverse Engineering DTD -->
+<!ELEMENT hibernate-reverse-engineering (schema-selection*, table-filter*, type-mapping?, table-template?)>
+
+<!ELEMENT schema-selection EMPTY>
+    <!ATTLIST schema-selection
+        match-schema CDATA #IMPLIED
+        match-catalog CDATA #IMPLIED>
+
+<!ELEMENT table-filter EMPTY>
+    <!ATTLIST table-filter
+        match-name CDATA #IMPLIED
+        exclude (true|false) "false">
+
+<!ELEMENT type-mapping (sql-type+)>
+<!ELEMENT sql-type (java-type?)>
+    <!ATTLIST sql-type name CDATA #REQUIRED>
+<!ELEMENT java-type EMPTY>
+    <!ATTLIST java-type name CDATA #REQUIRED>
+
+<!ELEMENT table-template EMPTY>
+    <!ATTLIST table-template name CDATA #IMPLIED>

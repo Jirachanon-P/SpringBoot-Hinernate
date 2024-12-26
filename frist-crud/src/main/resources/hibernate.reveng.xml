@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering>
+<hibernate-reverse-engineering>
+    <!-- Include only the S_Test schema -->
+    <schema-selection match-schema="dbo" match-catalog="SpringBootTest" />
+    
+    <!-- Optionally, include all tables from the schema you want -->
+    <!-- <table-filter match-name=".*" exclude="false" /> -->
+</hibernate-reverse-engineering>
